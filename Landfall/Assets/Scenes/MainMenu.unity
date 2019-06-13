@@ -132,8 +132,8 @@ GameObject:
   - component: {fileID: 19394577}
   - component: {fileID: 19394576}
   - component: {fileID: 19394575}
-  - component: {fileID: 19394578}
   - component: {fileID: 19394579}
+  - component: {fileID: 19394578}
   m_Layer: 5
   m_Name: NewGameButton
   m_TagString: Untagged
@@ -264,7 +264,7 @@ Animator:
   m_GameObject: {fileID: 19394573}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6f6b2e3792bf360488f7859f383b2384, type: 2}
+  m_Controller: {fileID: 9100000, guid: 25550258cff0a954bad9d8e746d58d33, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -541,8 +541,8 @@ GameObject:
   - component: {fileID: 604673839}
   - component: {fileID: 604673838}
   - component: {fileID: 604673837}
-  - component: {fileID: 604673836}
   - component: {fileID: 604673835}
+  - component: {fileID: 604673836}
   m_Layer: 5
   m_Name: ExitButton
   m_TagString: Untagged
@@ -592,7 +592,7 @@ Animator:
   m_GameObject: {fileID: 604673833}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6f6b2e3792bf360488f7859f383b2384, type: 2}
+  m_Controller: {fileID: 9100000, guid: 25550258cff0a954bad9d8e746d58d33, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
