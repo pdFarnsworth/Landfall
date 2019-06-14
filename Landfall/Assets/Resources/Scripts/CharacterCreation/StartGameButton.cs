@@ -21,6 +21,7 @@ public class StartGameButton : MonoBehaviour
         if (lNameField.text == "")                                                     // No last name
         {
             DisplayError("Please enter last name.");
+            return;
         }
 
         // Find Player
@@ -32,14 +33,28 @@ public class StartGameButton : MonoBehaviour
         SceneManager.LoadScene(2);
     }
 
-
+    /// <summary>
+    /// Method to display error using specified string.
+    /// </summary>
+    /// <param name="s">the message to display</param>
     private void DisplayError(string s)
     {
         errorPanel.SetActive(true);
+        Animator a = errorPanel.GetComponent<Animator>();
+        errorPanel.GetComponentInChildren<Text>().text = s;
+        StartCoroutine(errorPause(a));
     }
-
+    /// <summary>
+    /// Coroutine for error message display timing
+    /// </summary>
+    /// <param name="a">error panel animator</param>
+    /// <returns></returns>
     IEnumerator errorPause(Animator a)
     {
+        a.SetBool("IsOpen", true);
         yield return new WaitForSeconds(2);
+        a.SetBool("IsOpen", false);
+        yield return new WaitForSeconds(a.GetCurrentAnimatorStateInfo(0).length + a.GetCurrentAnimatorClipInfo(0).Length);
+        a.gameObject.SetActive(false);
     }
 }
