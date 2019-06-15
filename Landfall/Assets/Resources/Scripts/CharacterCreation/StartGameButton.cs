@@ -12,13 +12,16 @@ public class StartGameButton : MonoBehaviour
 
     public void StartGame()
     {
+        // Temp strings
+        string fn = fNameField.text;                                                   // first name string
+        string ln = lNameField.text;                                                   // last name string
         // CHECK TO MAKE SURE ALL DATA IS INPUT
-        if (fNameField.text == "")                                                     // No first name
+        if (fNameField.text == "" || string.IsNullOrWhiteSpace(fn))                    // No first name
         {
             DisplayError("Please enter first name.");
             return;
         }
-        if (lNameField.text == "")                                                     // No last name
+        if (lNameField.text == "" || string.IsNullOrWhiteSpace(ln))                    // No last name
         {
             DisplayError("Please enter last name.");
             return;
@@ -26,7 +29,9 @@ public class StartGameButton : MonoBehaviour
 
         // Find Player
         PlayerData pd = FindObjectOfType<Player>().data;
+        // Set player name
         pd.fName = fNameField.text;
+        pd.lName = lNameField.text;
 
 
         // Load Scene

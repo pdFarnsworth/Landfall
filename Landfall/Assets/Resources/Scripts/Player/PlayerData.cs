@@ -5,4 +5,5 @@ using UnityEngine;
 public class PlayerData
 {
     public string fName, lName;
+    public float health, stamina;
 }
