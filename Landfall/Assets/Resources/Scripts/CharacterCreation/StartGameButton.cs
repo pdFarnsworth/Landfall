@@ -38,6 +38,24 @@ public class StartGameButton : MonoBehaviour
         SceneManager.LoadScene(2);
     }
 
+    private void SetProfession(string p)
+    {
+        PlayerData pd = FindObjectOfType<Player>().data;
+        switch (p)
+        {
+            case "Soldier":
+                pd.profession = "Soldier";
+                break;
+            case "Engineer":
+                pd.profession = "Engineer";
+                break;
+            case "Rogue":
+                pd.profession = "Rogue";
+                break;
+        }
+            
+    }
+
     /// <summary>
     /// Method to display error using specified string.
     /// </summary>
